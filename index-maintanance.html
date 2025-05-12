@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<title>Site Maintenance</title>
+
+    <style>
+  body { text-align: center; padding: 150px; font: 20px Helvetica, sans-serif; color: #333; }
+  .h1 { text-align: center; font-size: 60px; }
+  .tail { color: #e34c26; font: 20px Helvetica, sans-serif; }
+  .container { display: block; text-align: left; width: 750px; margin: 0 auto; }
+  .contact a { color: #e34c26; text-decoration: none; }
+  .contact a:hover { color: #333; text-decoration: none; }
+  .contact {font: 20px Helvetica, sans-serif; color: #333;}
+    </style>
+
+<div class="container">
+        <p class="h1">We're working on it!</p>
+        <p class="contact">We apologize for any inconvenience, but our website is currently undergoing some scheduled maintenance. In the meantime, you can still <a href="mailto:contact@hosted.website">contact us</a>.  We appreciate your patience and understanding.</p>
+        <p>Thank you for choosing <a class="tail">hosted.website</a></p>
+</div>
+    <script>
+    var emailLink = document.querySelector(".contact a");
+    var currentEmail = emailLink.getAttribute("href");
+    var hostedDomain = window.location.hostname;
+    var newEmail = currentEmail.replace(/@.*/, "@" + hostedDomain);
+    emailLink.setAttribute("href", newEmail);
+    var tailParagraph = document.querySelector(".tail");
+    var currentText = tailParagraph.textContent;
+    var hostedName = hostedDomain.replace(/\..*/, "");
+    var capitalizedHostedName = hostedName.charAt(0).toUpperCase() + hostedName.slice(1);
+    var newText = currentText.replace("hosted.website", capitalizedHostedName);
+    tailParagraph.textContent = newText;
+    emailLink.textContent = "contact us";
+</script>
