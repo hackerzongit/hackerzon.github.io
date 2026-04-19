@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
 <title>Hackerzon Academy — AI Cybersecurity Training Platform</title>
-<meta name="description" content="Hackerzon Academy is a full-stack cybersecurity training platform with AI-powered agents, live project boards, internal webmail, and 12‑week structured programmes across 6 security domains.">
+<meta name="description" content="Hackerzon Academy is a full-stack cybersecurity training platform with AI-powered agents, live project boards, internal webmail, and 12‑week structured programmes across 11 security domains.">
 <meta name="keywords" content="cybersecurity training, AI agents, pentesting, SOC, web security, cloud security, active directory, ethical hacking, hands-on labs">
 <meta name="author" content="Hackerzon Academy">
 <meta property="og:title" content="Hackerzon Academy — Secure. Aware. Operational.">
@@ -37,6 +37,12 @@
   --cloud:#8b5cf6;
   --soc:#ef4444;
   --basic:#6366f1;
+  --python:#3776ab;
+  --api:#ff6b6b;
+  --mobile:#f39c12;
+  --grc:#2ecc71;
+  --devsecops:#9b59b6;
+  --blank:#10b981;
 }
 html{scroll-behavior:smooth}
 body{
@@ -513,6 +519,18 @@ section{padding:64px 24px;position:relative}
 .domain-card[data-domain="soc"]::before{background:var(--soc)}
 .domain-card[data-domain="basic"]{--card-color:var(--basic)}
 .domain-card[data-domain="basic"]::before{background:var(--basic)}
+.domain-card[data-domain="python"]{--card-color:var(--python)}
+.domain-card[data-domain="python"]::before{background:var(--python)}
+.domain-card[data-domain="api"]{--card-color:var(--api)}
+.domain-card[data-domain="api"]::before{background:var(--api)}
+.domain-card[data-domain="mobile"]{--card-color:var(--mobile)}
+.domain-card[data-domain="mobile"]::before{background:var(--mobile)}
+.domain-card[data-domain="grc"]{--card-color:var(--grc)}
+.domain-card[data-domain="grc"]::before{background:var(--grc)}
+.domain-card[data-domain="devsecops"]{--card-color:var(--devsecops)}
+.domain-card[data-domain="devsecops"]::before{background:var(--devsecops)}
+.domain-card[data-domain="blank"]{--card-color:var(--blank)}
+.domain-card[data-domain="blank"]::before{background:var(--blank)}
 .domain-icon{
   width:44px;height:44px;border-radius:10px;
   display:flex;align-items:center;justify-content:center;
@@ -1235,7 +1253,7 @@ footer{
     </div>
     <div class="hero-stats">
       <div class="hero-stat">
-        <div class="num">6</div>
+        <div class="num">11</div>
         <div class="label font-mono">Security Domains</div>
       </div>
       <div class="hero-stat">
@@ -1334,7 +1352,7 @@ footer{
       <div class="how-num font-display">01</div>
       <div class="how-icon">🎯</div>
       <h3 class="how-h3 font-display">Enroll in a Domain</h3>
-      <p class="how-p">Choose from 11 specialised security domains. Each domain is a 12-week programme divided into 4 project sprints. Your learning path is personalised from day one.</p>
+      <p class="how-p">Choose from 6 specialised security domains. Each domain is a 12-week programme divided into 4 project sprints. Your learning path is personalised from day one.</p>
       <div class="how-tags">
         <span class="tag font-mono">12 weeks</span>
         <span class="tag font-mono">4 sprints</span>
@@ -1467,7 +1485,88 @@ footer{
         <span class="pill font-mono">IR</span>
         <span class="pill font-mono">Threat Hunt</span>
       </div>
+          </div>
+
+                <!-- Python Security -->
+    <div class="domain-card" data-domain="python">
+      <div class="domain-weeks font-mono">12 WEEKS</div>
+      <div class="domain-icon">🐍</div>
+      <div class="domain-name font-display">Python Security</div>
+      <div class="domain-desc">Secure coding in Python, common vulnerabilities (pickle, eval, input validation), and building security automation scripts.</div>
+      <div class="domain-pills">
+        <span class="pill font-mono">Bandit</span>
+        <span class="pill font-mono">PyCrypto</span>
+        <span class="pill font-mono">Requests</span>
+        <span class="pill font-mono">Scapy</span>
+        <span class="pill font-mono">Flask</span>
+      </div>
     </div>
+
+    <!-- API Security -->
+    <div class="domain-card" data-domain="api">
+      <div class="domain-weeks font-mono">12 WEEKS</div>
+      <div class="domain-icon">🔌</div>
+      <div class="domain-name font-display">API Security</div>
+      <div class="domain-desc">REST, GraphQL, and SOAP security testing. OAuth 2.0, JWT attacks, rate‑limiting bypass, and API‑specific OWASP Top 10.</div>
+      <div class="domain-pills">
+        <span class="pill font-mono">Postman</span>
+        <span class="pill font-mono">Burp</span>
+        <span class="pill font-mono">JWT_Tool</span>
+        <span class="pill font-mono">GraphQL</span>
+        <span class="pill font-mono">OAuth</span>
+      </div>
+    </div>
+
+    <!-- Mobile Security -->
+    <div class="domain-card" data-domain="mobile">
+      <div class="domain-weeks font-mono">12 WEEKS</div>
+      <div class="domain-icon">📱</div>
+      <div class="domain-name font-display">Mobile Security</div>
+      <div class="domain-desc">Android & iOS application pentesting. APK/IPA analysis, SSL pinning bypass, deep links, and mobile‑specific OWASP Top 10.</div>
+      <div class="domain-pills">
+        <span class="pill font-mono">MobSF</span>
+        <span class="pill font-mono">Frida</span>
+        <span class="pill font-mono">Objection</span>
+        <span class="pill font-mono">jadx</span>
+        <span class="pill font-mono">Drozer</span>
+      </div>
+    </div>
+
+    <!-- GRC -->
+    <div class="domain-card" data-domain="grc">
+      <div class="domain-weeks font-mono">12 WEEKS</div>
+      <div class="domain-icon">📜</div>
+      <div class="domain-name font-display">GRC</div>
+      <div class="domain-desc">Governance, Risk, and Compliance. ISO 27001, NIST CSF, GDPR, risk assessments, and building security policies.</div>
+      <div class="domain-pills">
+        <span class="pill font-mono">ISO 27001</span>
+        <span class="pill font-mono">NIST</span>
+        <span class="pill font-mono">GDPR</span>
+        <span class="pill font-mono">PCI‑DSS</span>
+        <span class="pill font-mono">Risk Mgmt</span>
+      </div>
+    </div>
+
+    <!-- DevSecOps -->
+    <div class="domain-card" data-domain="devsecops">
+      <div class="domain-weeks font-mono">12 WEEKS</div>
+      <div class="domain-icon">⚙️</div>
+      <div class="domain-name font-display">DevSecOps</div>
+      <div class="domain-desc">Shift‑left security. SAST/DAST in CI/CD, container scanning, infrastructure as code security, and secrets management.</div>
+      <div class="domain-pills">
+        <span class="pill font-mono">SAST</span>
+        <span class="pill font-mono">Trivy</span>
+        <span class="pill font-mono">Semgrep</span>
+        <span class="pill font-mono">GitHub Actions</span>
+        <span class="pill font-mono">Terraform</span>
+      </div>
+    </div>
+    <!-- Blank -->
+    <div class="domain-card" data-domain="blank">
+      <div class="domain-weeks font-mono"></div>
+      </div>
+    </div>
+
 
   </div>
 </section>
@@ -1906,7 +2005,7 @@ footer{
     <a href="#domains" class="btn-primary">Choose Your Domain →</a>
     <a href="#platform" class="btn-ghost">See the Platform</a>
   </div>
-  <div class="cta-note font-mono">All 11 domains · 12 weeks · 3 AI agents · 1 platform</div>
+  <div class="cta-note font-mono">All 6 domains · 12 weeks · 3 AI agents · 1 platform</div>
 </section>
 
 <!-- FOOTER -->
@@ -1914,7 +2013,7 @@ footer{
   <div class="footer-top">
     <div>
        <img src="logo1.png" alt="Hackerzon Logo" style="height:32px; margin-bottom:16px;">
-      <div class="footer-tagline">A full-stack cybersecurity training platform with AI-powered agents, live project boards, internal webmail, and a 12-week structured programme across 6 security domains.</div>
+      <div class="footer-tagline">A full-stack cybersecurity training platform with AI-powered agents, live project boards, internal webmail, and a 12-week structured programme across 11 security domains.</div>
       <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--dim)">academy.hackerzon.com</div>
     </div>
     <div>
