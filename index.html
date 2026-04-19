@@ -297,20 +297,28 @@ nav{
 
 /* Hero terminal mockup (Ask Amith) */
 .hero-terminal{
-  display:none; /* hidden on mobile by default, can be shown with media query if desired */
+  display:block;
+  position:relative;
+  width:100%;
+  max-width:400px;
+  margin:40px auto 0;
+  background:var(--surface2);
+  border:1px solid var(--border2);
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 40px 80px rgba(0,0,0,.6),0 0 0 1px rgba(0,212,255,.08);
+  opacity:0;
+  animation:fade-up .8s 1.2s forwards;
 }
 @media(min-width:1100px){
   .hero-terminal{
-    display:block;
-    position:absolute;right:60px;top:50%;
+    position:absolute;
+    right:60px;
+    top:50%;
     transform:translateY(-50%);
+    margin:0;
     width:400px;
-    background:var(--surface2);
-    border:1px solid var(--border2);
-    border-radius:12px;
-    overflow:hidden;
-    box-shadow:0 40px 80px rgba(0,0,0,.6),0 0 0 1px rgba(0,212,255,.08);
-    opacity:0;animation:fade-left .8s 1.2s forwards;
+    animation:fade-left .8s 1.2s forwards;
   }
 }
 @keyframes fade-left{
